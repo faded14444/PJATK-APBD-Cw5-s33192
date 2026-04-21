@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Program.Models;
+namespace TrainingCenterApi.Models;
 
 public class Room
 {
