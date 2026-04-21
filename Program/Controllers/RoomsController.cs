@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Program.Data;
-using Program.Models;
+using TrainingCenterApi.Data;
+using TrainingCenterApi.Models;
 
-namespace Program.Controllers;
+namespace TrainingCenterApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

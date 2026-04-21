@@ -1,6 +1,6 @@
-﻿using Program.Models;
+﻿using TrainingCenterApi.Models;
 
-namespace Program.Data;
+namespace TrainingCenterApi.Data;
 
 public static class InMemoryStore
 {
@@ -35,7 +35,7 @@ public static class InMemoryStore
     {
         lock (SyncRoot)
         {
-            return Rooms.Count == 0 ? 1 : Rooms.Max(room => room.Id) + 1;
+            return Rooms.Count == 0 ? 1 : Rooms.Select(room => room.Id).Max() + 1;
         }
     }
 
@@ -43,7 +43,7 @@ public static class InMemoryStore
     {
         lock (SyncRoot)
         {
-            return Reservations.Count == 0 ? 1 : Reservations.Max(reservation => reservation.Id) + 1;
+            return Reservations.Count == 0 ? 1 : Reservations.Select(reservation => reservation.Id).Max() + 1;
         }
     }
 }
